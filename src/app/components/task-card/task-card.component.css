@@ -1,0 +1,3 @@
+svg path {
+  transition: fill 300ms ease-in-out !important;
+}
