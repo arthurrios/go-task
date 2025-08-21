@@ -1,1 +1,24 @@
-<p>task-form-modal works!</p>
+<form class="rounded-xl overflow-hidden bg-background-light">
+  <div class="flex items-center gap-1 p-4">
+    <img class="size-4" src="images/icon-new-task.svg" alt="new task"/>
+    <h1 class="heading-medium text-text-heading">Create task</h1>
+    <img class="size-4 cursor-pointer ml-auto" src="images/icon-close.svg" alt="close"/>
+  </div>
+  <div class="p-4 border-y border-border-light flex flex-col gap-4">
+    <div class="flex flex-col gap-2">
+      <p class="label-medium text-text-heading">Name</p>
+      <input class="input" type="text" placeholder="Describe what you want to do">
+      <p class="label-small text-accent-red">This field is required and needs at least 10 characters.</p>
+    </div>
+    <div class="flex flex-col gap-2">
+      <p class="label-medium text-text-heading">Description</p>
+      <input class="input" type="text" placeholder="Add a description">
+      <p class="label-small text-accent-red">This field is required and needs at least 10 characters.</p>
+    </div>
+  </div>
+
+  <div class="p-4 flex justify-end gap-2">
+    <button class="button-secondary" type="button">Cancel</button>
+    <button class="button-primary" type="submit">Create a task</button>
+  </div>
+</form>
