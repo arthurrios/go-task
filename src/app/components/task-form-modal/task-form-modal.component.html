@@ -1,7 +1,7 @@
 <form class="rounded-xl overflow-hidden bg-background-light">
   <div class="flex items-center gap-1 p-4">
     <img class="size-4" src="images/icon-new-task.svg" alt="new task"/>
-    <h1 class="heading-medium text-text-heading">Create task</h1>
+    <h1 class="heading-medium text-text-heading">{{ (_data.mode === 'create' ? 'Create ' : 'Edit ') + 'task' }}</h1>
     <img class="size-4 cursor-pointer ml-auto" src="images/icon-close.svg" alt="close"/>
   </div>
   <div class="p-4 border-y border-border-light flex flex-col gap-4">
@@ -19,6 +19,6 @@
 
   <div class="p-4 flex justify-end gap-2">
     <button class="button-secondary" type="button">Cancel</button>
-    <button class="button-primary" type="submit">Create a task</button>
+    <button class="button-primary" type="submit">{{ _data.mode === 'create' ? 'Create a task' : 'Save changes' }}</button>
   </div>
 </form>
