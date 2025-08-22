@@ -1,24 +1,28 @@
-<form class="rounded-xl overflow-hidden bg-background-light">
+<form class="rounded-xl overflow-hidden bg-background-light" [formGroup]="taskForm" (ngSubmit)="onFormSubmit()">
   <div class="flex items-center gap-1 p-4">
     <img class="size-4" src="images/icon-new-task.svg" alt="new task"/>
     <h1 class="heading-medium text-text-heading">{{ (_data.mode === 'create' ? 'Create ' : 'Edit ') + 'task' }}</h1>
-    <img class="size-4 cursor-pointer ml-auto" src="images/icon-close.svg" alt="close"/>
+    <img (click)="closeModal()" class="size-4 cursor-pointer ml-auto" src="images/icon-close.svg" alt="close"/>
   </div>
   <div class="p-4 border-y border-border-light flex flex-col gap-4">
     <div class="flex flex-col gap-2">
       <p class="label-medium text-text-heading">Name</p>
-      <input class="input" type="text" placeholder="Describe what you want to do">
-      <p class="label-small text-accent-red">This field is required and needs at least 10 characters.</p>
+      <input class="input" type="text" placeholder="Describe what you want to do" formControlName="name">
+      @if(taskForm.get('name')?.touched && taskForm.get('name')?.invalid && taskForm.get('name')?.dirty) {
+        <p class="label-small text-accent-red">This field is required and needs at least 10 characters.</p>
+      }
     </div>
     <div class="flex flex-col gap-2">
       <p class="label-medium text-text-heading">Description</p>
-      <input class="input" type="text" placeholder="Add a description">
-      <p class="label-small text-accent-red">This field is required and needs at least 10 characters.</p>
+      <input class="input" type="text" placeholder="Add a description" formControlName="description">
+      @if(taskForm.get('description')?.touched && taskForm.get('description')?.invalid && taskForm.get('description')?.dirty) {
+        <p class="label-small text-accent-red">This field is required and needs at least 10 characters.</p>
+      }
     </div>
   </div>
 
   <div class="p-4 flex justify-end gap-2">
-    <button class="button-secondary" type="button">Cancel</button>
-    <button class="button-primary" type="submit">{{ _data.mode === 'create' ? 'Create a task' : 'Save changes' }}</button>
+    <button class="button-secondary" type="button" (click)="closeModal()">Cancel</button>
+    <button class="{{ taskForm.invalid ? 'button-primary-disabled' : 'button-primary' }}" type="submit" [disabled]="taskForm.invalid">{{ _data.mode === 'create' ? 'Create a task' : 'Save changes' }}</button>
   </div>
 </form>

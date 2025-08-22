@@ -82,6 +82,10 @@ html {
     @apply bg-accent-brand text-text-invert rounded-xl py-3 px-4 shadow-lg shadow-accent-brand/40 cursor-pointer hover:bg-accent-brand-dark transition-all duration-300 active:translate-y-2;
   }
 
+  .button-primary-disabled {
+    @apply bg-accent-brand/50 text-text-invert rounded-xl py-3 px-4 shadow-lg shadow-accent-brand/40 cursor-not-allowed;
+  }
+
   .button-secondary {
     @apply bg-background-surface text-text-heading rounded-xl py-3 px-4 hover:bg-background-dark transition-all duration-300 cursor-pointer active:translate-y-2;
   }

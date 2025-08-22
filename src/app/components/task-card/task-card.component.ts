@@ -11,6 +11,9 @@ export class TaskCardComponent {
   private readonly _modalControllerService = inject(ModalControllerService)
 
   openEditTaskModal() {
-    this._modalControllerService.openEditTaskModal()
+    this._modalControllerService.openEditTaskModal({
+      name: 'My new task',
+      description: 'This is my task to create an Angular application'
+    })
   }
 }
