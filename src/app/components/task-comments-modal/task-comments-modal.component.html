@@ -1,1 +1,29 @@
-<p>task-comments-modal works!</p>
+<div class="rounded-xl overflow-hidden bg-background-light max-h-[500px]">
+  <div class="flex items-center gap-1 p-4">
+    <img class="size-4" src="images/icon-task-star.svg" alt="comment modal"/>
+    <h1 class="heading-medium text-text-heading">Comment task</h1>
+    <img class="size-4 cursor-pointer ml-auto" src="images/icon-close.svg" alt="close"/>
+  </div>
+  <div class="p-4 border-t border-border-light flex flex-col gap-6">
+    <h1 class="heading-medium text-text-heading">My new task</h1>
+    <div class="flex flex-col gap-2">
+      <p class="label-medium text-text-heading">Description</p>
+      <p class="paragraph-large text-text-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+      </p>
+    </div>
+  </div>
+  <div class="p-4">
+    <div class="bg-background-secondary p-5 rounded-xl flex flex-col gap-5">
+      <div>
+        <p class="label-small text-text-heading">Comments</p>
+      </div>
+      <div class="flex items-start gap-2">
+        <div class="flex flex-col w-full gap-1">
+          <input class="input" type="text" placeholder="Add a comment"/>
+          <p class="label-small text-accent-red">This field is required.</p>
+        </div>
+        <button class="button-primary">Add</button>
+      </div>
+    </div>
+  </div>
+</div>

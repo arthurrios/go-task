@@ -21,6 +21,7 @@ html {
   --color-background-light: #FFFFFF;
   --color-background-dark: #D7D8D8;
   --color-background-surface: #FAFAFA;
+  --color-background-secondary: #F3F4F6;
 
   --color-accent-brand: #2A89EF;
   --color-accent-brand-light: #ECF4FE;
@@ -74,7 +75,7 @@ html {
   }
 
   .input {
-    @apply border border-border-light rounded-lg p-3 placeholder:text-text-placeholder;
+    @apply bg-background-light border border-border-light rounded-lg p-3 placeholder:text-text-placeholder;
   }
 
   .button-primary {
