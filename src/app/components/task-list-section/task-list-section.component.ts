@@ -14,6 +14,10 @@ export class TaskListSectionComponent {
   ngOnInit() {
     this._taskService.todoTasks.subscribe((todoList) => {
       console.log('Todo list: ', todoList)
+
+      todoList[0].name = 'test'
+
+      this._taskService.loadUpdatedTaskList()
     })
   }
 }
