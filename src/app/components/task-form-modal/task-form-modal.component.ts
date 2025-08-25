@@ -20,7 +20,7 @@ export class TaskFormModalComponent {
   })
 
   onFormSubmit() {
-    console.log(this.taskForm.value)
+    this.closeModal(this.taskForm.value)
   }
 
   closeModal(formValues: ITaskFormControls | undefined = undefined) {
